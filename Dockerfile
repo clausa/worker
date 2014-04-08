@@ -15,5 +15,5 @@ RUN apt-get update && apt-get install -y --no-install-recommends libmysqlclient-
 ADD requirements.pip /tmp/requirements.pip
 RUN pip install virtualenv
 RUN virtualenv /srv/siteenv
-RUN apt-get install -y --no-install-recommends build-essentials
+RUN apt-get install -y --no-install-recommends build-essential
 RUN cd /srv/siteenv/ && /bin/bash -c 'source bin/activate && pip install -r /tmp/requirements.pip'
